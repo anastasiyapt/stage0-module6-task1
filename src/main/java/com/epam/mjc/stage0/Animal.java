@@ -17,17 +17,16 @@ public class Animal {
     "This animal is mostly (color). It has (numberOfPaws) paws
      and ('a'/'no' -> depends on value of hasFur) fur."
      */
-    public String getDescription(String color, int numberOfPaws, boolean hasFur){
-        String result;
-        if(hasFur){
-            result = "This animal is mostly " + color + "." + " It has " + numberOfPaws +
-                    " paws and a fur.";
-        } else{
-            result = "This animal is mostly " + color + "." + " It has " + numberOfPaws +
-                    " paws and no fur.";
-        }return result;
+     public void getDescription(String color, int numberOfPaws, boolean hasFur) {
+        if (hasFur == false) {
+             System.out.println("This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and no fur.");
+        } else {
+            System.out.println( "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and a fur.");
+        }
 
     }
+
+
 
 
 }
