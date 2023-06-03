@@ -6,19 +6,19 @@ public class Animal {
     private int numberOfPaws;
     private boolean hasFur;
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
-    public int getNumberOfPaws(){
+    public int getNumberOfPaws() {
         return numberOfPaws;
     }
 
-    public boolean getHasFur(){
+    public boolean getHasFur() {
         return hasFur;
     }
 
-    public Animal(String color, int numberOfPaws,boolean hasFur){
+    public Animal(String color, int numberOfPaws, boolean hasFur) {
         this.color = color;
         this.numberOfPaws = numberOfPaws;
         this.hasFur = hasFur;
@@ -29,23 +29,25 @@ public class Animal {
     "This animal is mostly (color). It has (numberOfPaws) paws
      and ('a'/'no' -> depends on value of hasFur) fur."
      */
-     public String getDescription() {
+    public String getDescription() {
         if (hasFur == false) {
-             return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and no fur.";
+            if (numberOfPaws == 1) {
+                return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paw and no fur.";
+            } else {
+                return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and no fur.";
+            }
+
         } else {
-            return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and a fur.";
+            if (numberOfPaws == 1) {
+                return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paw and a fur.";
+            } else {
+                return "This animal is mostly " + color + ". " + "It has " + numberOfPaws + " paws and a fur.";
+            }
+
         }
 
     }
 
 
-
-   /* public static void main(String[] args){
-         Animal animal1 = new Animal("red", 2, true);
-        animal1.getDescription();
-
-    }
-
-    */
 
 }
